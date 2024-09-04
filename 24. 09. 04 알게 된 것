@@ -1,4 +1,4 @@
-소수 판별법
+-- 소수 판별법 --
 
 [ N의 제곱근보다 작은 수로 나누기 ]
 
@@ -9,3 +9,8 @@ Public boolean isPrimeNumber (int n) {
 	}
 	return true;
 }
+
+-- 제곱근 구하기 --
+Math.sqrt() 
+
+ex) Math.sqrt(int n) →  n의 제곱근 구하기
