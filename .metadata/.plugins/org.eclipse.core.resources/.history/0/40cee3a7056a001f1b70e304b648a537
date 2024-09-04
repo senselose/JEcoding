@@ -1,0 +1,10 @@
+package Lv2;
+
+public class k진수에서_소수_개수_구하기 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

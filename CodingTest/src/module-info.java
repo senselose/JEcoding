@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author sense
+ *
+ */
+module CodingTest {
+}

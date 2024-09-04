@@ -1,0 +1,10 @@
+package Lv2;
+
+public class 피보나치수 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
