@@ -42,8 +42,6 @@ public class k진수에서_소수_개수_구하기 {
 		
 		int k = 10;
 		int n = 121;
-//		int k = 3;
-//		int n = 437674;
 		
 		// k진수로 변환하기 (문자열로 저장)
 		String kResult = "";
