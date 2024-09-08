@@ -1,4 +1,7 @@
+![header](https://capsule-render.vercel.app/api?type=wave&color=auto&height=300&section=header&text=capsule%20render&fontSize=90)
+
 신입 개발자의 코딩노트입니다
+
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=senselose)](https://github.com/anuraghazra/github-readme-stats)
 [![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=senselose)](https://github.com/anuraghazra/github-readme-stats)
@@ -14,4 +17,4 @@
 
 </details> <br/>
 
-<img src="https://img.shields.io/badge/이름-색상코드?style=flat-square&logo=로고명&logoColor=로고색"/>
+
