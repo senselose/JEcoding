@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=HELLO&senselose&fontSize=90)
+![header](https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=Hello%20senselose&fontSize=60)
 
 신입 개발자의 코딩노트입니다
 
