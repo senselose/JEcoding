@@ -30,10 +30,10 @@ public class 등굣길 {
 		// 최종 [m-1][n-1]에 저장된 값 출력
 		
 		
-		int m = 5;
-		int n = 5;
+		int m = 4;
+		int n = 3;
 		int[][] map = new int [n][m];
-		int[][] puddles = { { 2, 2 }, { 1, 4 } ,{4,2},{4,4}};
+		int[][] puddles = {{1,4}};
 		
 //		// 가로열 첫번째 줄에 모두 1 채우기
 //        for(int i=0; i<m; i++) {
@@ -54,10 +54,8 @@ public class 등굣길 {
 		
 		// 웅덩이 정보 가져오기
 		for (int[] puddle : puddles) {
-			map[puddle[1] - 1][puddle[0] - 1] = 0; // 웅덩이는 0으로 설정
+			map[puddle[0] - 1][puddle[1] - 1] = 0; // 웅덩이는 0으로 설정
 		}
-		
-		map[0][0] = 1;
 		
 		// 전체 요소 접근 (위의 방식으로 하면 나머지가 0이라서 계속 지나침)
         for(int i=0; i<map.length; i++) { // 행
@@ -97,7 +95,7 @@ public class 등굣길 {
                 if(map[i][j] == 0) {
                     continue; // 웅덩이는 건너뛰기
                 } else {
-                	map[i][j] = ((map[i-1][j]%1000000007) + (map[i][j-1]%1000000007));
+                	map[i][j] = (map[i-1][j] + map[i][j-1]);
                 }
             }
         }
@@ -111,10 +109,10 @@ public class 등굣길 {
             System.out.println();
         }
         
-        // 결과 값 저장 (문제 똑바로 읽자)
+        // 결과 값 저장
         int answer = 0;
         for(int[] res : map) {
-        	answer = map[n-1][m-1]%1000000007;
+        	answer = map[n-1][m-1];
         }
         
         System.out.println(answer);
