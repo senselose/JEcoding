@@ -64,7 +64,7 @@ public class 숫자_문자열과_영단어 {
 		// contains, replace 사용하기
 		for(int i=0; i<=9;i++) {
 			if(s.contains(word[i])) {
-				s = s.replaceAll(word[i], num[i]);
+				s = s.replaceAll(word[i], i+"");
 			}
 		}
 		

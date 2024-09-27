@@ -33,7 +33,7 @@ public class 나누어_떨어지는_숫자_배열 {
 		입출력 예#3
 		3, 2, 6은 10으로 나누어 떨어지지 않습니다. 나누어 떨어지는 원소가 없으므로 [-1]을 리턴합니다.
 		 */
-		
+
 //		int[] arr = {5, 9, 7, 10};
 //		int divisor = 5;
 		int[] arr = {3,2,6};
@@ -45,6 +45,8 @@ public class 나누어_떨어지는_숫자_배열 {
 		for(int a:arr) {
 			System.out.println(a);
 		}
+		// 확인2
+		System.out.println(Arrays.toString(arr));
 		
 		// answerList에 나누어지는 수 저장
 		ArrayList<Integer> answerList = new ArrayList<>();
