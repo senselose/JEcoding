@@ -1,0 +1,10 @@
+package Lv1;
+
+public class 성격_유형_검사하기 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
