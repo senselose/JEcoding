@@ -1,0 +1,71 @@
+package Test;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class kakao_mobility_1 {
+
+	public static void main(String[] args) {
+
+		int [] R = {0,2,1,1,0,4,1};
+		
+		ArrayList<int[]> result = new ArrayList<>();
+        ArrayList<Integer> tempList = new ArrayList<>();
+		
+        for (int num : R) {
+            if (num != 0) {
+                tempList.add(num);
+            } else {
+                // 0을 만난 경우 tempList를 배열로 변환하고 result 리스트에 추가
+                if (!tempList.isEmpty()) {
+                    // tempList를 int[] 배열로 변환
+                    int[] tempArray = new int[tempList.size()];
+                    for (int i = 0; i < tempList.size(); i++) {
+                        tempArray[i] = tempList.get(i);
+                    }
+                    result.add(tempArray);
+                    tempList.clear(); // tempList 초기화
+                }
+            }
+        }
+        // 마지막 그룹이 있을 경우 추가
+        if (!tempList.isEmpty()) {
+            int[] tempArray = new int[tempList.size()];
+            for (int i = 0; i < tempList.size(); i++) {
+                tempArray[i] = tempList.get(i);
+            }
+            result.add(tempArray);
+        }
+		
+     // 결과 출력
+        for (int[] arr : result) {
+            System.out.println(Arrays.toString(arr));
+        }
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

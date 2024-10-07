@@ -1,0 +1,47 @@
+package Test;
+
+import java.util.*;
+
+public class kako_mobility_2 {
+
+	public static void main(String[] args) {
+		String start = "00:01:10";
+        String end = "10:13:11";
+
+        // 시간을 초 단위로 변환
+        LocalTime startTime = LocalTime.parse(start);
+        LocalTime endTime = LocalTime.parse(end);
+
+        long startSeconds = startTime.toSecondOfDay();
+        long endSeconds = endTime.toSecondOfDay() + Duration.ofHours(10).toSeconds();  // 10:13:11은 초 단위로 더해야 함
+
+        int count = 0;
+
+        // 시작 초부터 종료 초까지 순회
+        for (long i = startSeconds; i <= endSeconds; i++) {
+            // 초를 HH:MM:SS로 변환
+            LocalTime currentTime = LocalTime.ofSecondOfDay(i % 86400); // 86400은 하루의 총 초수
+            String timeStr = currentTime.toString();
+
+            // HH, MM, SS 확인
+            String[] parts = timeStr.split(":");
+            String hh = parts[0];
+            String mm = parts[1];
+            String ss = parts[2];
+
+            // 각각의 부분이 한 가지 또는 두 가지 숫자로만 이루어졌는지 확인
+            if (isOneOrTwoUniqueDigits(hh) && isOneOrTwoUniqueDigits(mm) && isOneOrTwoUniqueDigits(ss)) {
+                count++;
+            }
+        }
+
+        System.out.println("조건을 만족하는 시간 횟수: " + count);
+		}	
+
+	    // 문자열이 1가지 또는 2가지 숫자로만 이루어졌는지 확인하는 메서드
+	    private static boolean isOneOrTwoUniqueDigits(String str) {
+	        return str.chars().distinct().count() <= 2;
+	    }
+	}
+
+}

@@ -1,0 +1,25 @@
+package Lv2_Programmers;
+
+public class 이진_변환_반복하기 {
+
+	public static void main(String[] args) {
+		// 문자열에서 0 모두 제거하기.
+		String s = "0111010";
+		String tempS = "";
+		
+		for(int i=0; i<s.length();i++) {
+			if(s.charAt(i) == '1') {
+				tempS += s.charAt(i);
+			}
+		}
+		
+		System.out.println(tempS);
+		
+		// 2진법 하는 횟수 저장할 변수
+		int count = 0;
+		
+		
+		
+	}
+
+}

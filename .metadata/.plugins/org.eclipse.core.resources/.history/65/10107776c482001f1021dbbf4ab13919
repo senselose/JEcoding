@@ -1,0 +1,79 @@
+package Test;
+
+public class kakao_mmobility_3 {
+	public static void main(String[] args) {
+		int[] distance1 = {2, 5};
+        String[] trash1 = {"ABA", "C"};
+        System.out.println(minimumCollectionTime(distance1, trash1)); // 15
+
+        int[] distance2 = {3, 2, 4};
+        String[] trash2 = {"CAC", "", "B"};
+        System.out.println(minimumCollectionTime(distance2, trash2)); // 19
+    }
+
+    public static int minimumCollectionTime(int[] distance, String[] trash) {
+        int[] lastHouseForTruck = new int[3]; // 0:A, 1:B, 2:C
+        int[] trashCount = new int[3]; // 0:A, 1:B, 2:C
+
+        // 각 트럭(A, B, C)이 방문해야 할 마지막 집을 찾고, 해당 트럭이 수거할 쓰레기 개수를 계산
+        for (int i = 0; i < trash.length; i++) {
+            String currentTrash = trash[i];
+
+            // 각 트럭의 방문 및 쓰레기 개수 확인
+            if (currentTrash.contains("A")) {
+                lastHouseForTruck[0] = i; // A 트럭이 방문해야 할 마지막 집
+                for (char c : currentTrash.toCharArray()) { // 'A' 쓰레기 카운트
+                    if (c == 'A') {
+                        trashCount[0]++;
+                    }
+                }
+            }
+            if (currentTrash.contains("B")) {
+                lastHouseForTruck[1] = i; // B 트럭이 방문해야 할 마지막 집
+                for (char c : currentTrash.toCharArray()) { // 'B' 쓰레기 카운트
+                    if (c == 'B') {
+                        trashCount[1]++;
+                    }
+                }
+            }
+            if (currentTrash.contains("C")) {
+                lastHouseForTruck[2] = i; // C 트럭이 방문해야 할 마지막 집
+                for (char c : currentTrash.toCharArray()) { // 'C' 쓰레기 카운트
+                    if (c == 'C') {
+                        trashCount[2]++;
+                    }
+                }
+            }
+        }
+
+        // 각 트럭(A, B, C)의 이동 시간과 쓰레기 수거 시간 계산
+        int[] totalTime = new int[3]; // 각 트럭의 총 걸린 시간 저장
+
+        for (int truck = 0; truck < 3; truck++) {
+            int lastHouse = lastHouseForTruck[truck];
+            if (lastHouse == 0 && trashCount[truck] == 0) {
+                continue; // 트럭이 갈 필요가 없으면 시간은 0
+            }
+
+            // 트럭이 마지막 집까지 갔다가 돌아오는 데 걸리는 이동 시간 계산
+            int travelTime = 0;
+            for (int i = 0; i <= lastHouse - 1; i++) {
+                travelTime += distance[i]; // 마지막 집까지의 거리
+            }
+            for (int i = 0; i < lastHouse - 1; i++) {
+                travelTime += distance[i]; // 마지막 집에서 다시 돌아오는 거리
+            }
+
+            // 쓰레기 수거 시간(1분 * 쓰레기 수) 더하기
+            int collectionTime = trashCount[truck];
+
+            // 총 시간 = 이동 시간 + 수거 시간
+            totalTime[truck] = travelTime + collectionTime;
+        }
+
+        // 가장 오래 걸린 시간을 반환
+        return Math.max(totalTime[0], Math.max(totalTime[1], totalTime[2]));
+		
+		
+	}
+}
