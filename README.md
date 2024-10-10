@@ -1,6 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=slice&color=auto&height=300&section=header&text=Hello%20JIEUN&fontSize=60)
 
-신입 개발자의 코딩노트입니다
+신입 개발자의 코딩노트입니다. 
+프로그래머스 문제풀이중
 
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=senselose)](https://github.com/anuraghazra/github-readme-stats)
