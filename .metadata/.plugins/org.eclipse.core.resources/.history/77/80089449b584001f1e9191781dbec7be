@@ -1,0 +1,10 @@
+package Lv1_Programmers;
+
+public class 최소직사각형 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

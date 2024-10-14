@@ -1,0 +1,27 @@
+package Lv2_Programmers;
+
+import java.util.Arrays;
+
+public class P241013_가장_큰_수 {
+
+	public static void main(String[] args) {
+		//int[] numbers = {6, 10, 2};
+		int[] numbers = {3, 30, 34, 5, 9};
+		String answer = "";		
+		
+		String [] sNumbers = new String[numbers.length];
+		for(int i=0; i<numbers.length; i++) {
+			sNumbers[i] = String.valueOf(numbers[i]);
+		}
+		
+		// 확인
+		System.out.println(Arrays.toString(sNumbers));
+		
+		Arrays.sort(sNumbers);
+		System.out.println(Arrays.toString(sNumbers));
+		
+		// numbers 요소의 첫번째 자리 수가 큰거부터 앞으로 더하기 ex) 6>1>2
+		// 만약 첫번째 자리가 같다면 두번째 자리 수가 큰거 순으로 더하기. ex) 34>30 but 1자리 수이면 3번째 자리수들 비교 후 추가하기
+	}
+
+}
