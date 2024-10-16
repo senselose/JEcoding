@@ -1,0 +1,26 @@
+package Lv1_Programmers;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
+public class P241016_정수_내림차순으로_배치하기 {
+
+	public static void main(String[] args) {
+
+		long n = 118372;
+		String nS = Long.toString(n);
+		
+		ArrayList<Integer> number = new ArrayList<>();
+		
+		for(int i=0; i<nS.length(); i++) {
+			number.add((int)nS.charAt(i));
+		}
+		
+		System.out.println(number.toString());
+		
+		Arrays.sort(number);
+		
+	}
+
+}

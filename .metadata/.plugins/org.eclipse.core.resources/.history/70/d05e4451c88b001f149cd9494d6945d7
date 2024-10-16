@@ -1,0 +1,32 @@
+package Lv1_Programmers;
+
+import java.util.Arrays;
+
+public class P241016_정수_내림차순으로_배치하기 {
+
+	public static void main(String[] args) {
+
+		// 873211
+		long n = 118372;
+		String nS = Long.toString(n);
+		
+		char[] charN = new char[nS.length()];
+		char[] sortN = new char[nS.length()];
+		
+		for(int i=0; i<nS.length(); i++) {
+			charN[i] = nS.charAt(i);
+		}
+		
+		Arrays.sort(charN);
+		
+		for(int i= 0; i<nS.length(); i++) {
+			sortN[i] = charN[charN.length -i -1];
+		}
+		
+		for(char ch : sortN) {
+			System.out.println(ch);
+		}
+		
+	}
+
+}
